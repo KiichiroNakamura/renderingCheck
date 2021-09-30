@@ -1,4 +1,4 @@
-import React, { useState, useContext, useCallback } from "react";
+import React, { useState, useEffect, useContext, useCallback } from "react";
 import { ListContext } from "../providers/ContextProvider";
 
 export const FileList = () => {
@@ -8,11 +8,16 @@ export const FileList = () => {
   console.log("fileList:" + fileList);
   const [addFile, setAddFile] = useState("");
   const onChangeAddFile = (e) => {
-    console.log("render2");
+    console.log("render-2");
     setAddFile(e.target.value);
   };
+  const aaa = useEffect(() => {
+    console.log("aaaa");
+  }, []);
 
   const onClickAddFile = () => {
+    console.log("render-3");
+
     if (addFile === "") return;
     console.log("render3");
     // alert(addFile);
