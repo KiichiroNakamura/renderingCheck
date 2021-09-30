@@ -12,7 +12,7 @@ export const FileList = () => {
     setAddFile(e.target.value);
   };
 
-  const onClickAddFile = useCallback(() => {
+  const onClickAddFile = () => {
     if (addFile === "") return;
     console.log("render3");
     // alert(addFile);
@@ -20,7 +20,7 @@ export const FileList = () => {
     setFiles(newList);
     setFileList(newList);
     setAddFile("");
-  });
+  };
 
   return (
     <div>
